@@ -4,7 +4,7 @@ export default function Ship ({ship}) {
       <div>
       <h4>{ship.mission_name}</h4>
           <p>launch year: {ship.launch_year}</p>
-          <img src={ship.mission_patch_small} alt={ship.name}/>
+          <img src={ship.links.mission_patch_small} alt={'ship'}/>
       </div>
     );
 }

@@ -10,10 +10,15 @@ export default function Ships () {
         getShips().then(value => setShips([...value]))
     }, [])
 
+let show2020 =
+    ships.filter(ship => ship.launch_year !== '2020')
+    console.log(show2020)
 
     return (
       <div>
-          {ships.map((ship,index) => <Ship key={index} ship={ship}/>)}
+          {ships.filter(value => value.launch_year !== '2020').map((ship,index) => <Ship key={index} ship={ship}/>)}
       </div>
+
+
     );
 }
